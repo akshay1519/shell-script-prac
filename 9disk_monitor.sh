@@ -4,7 +4,7 @@
 
 PARTITION="/"
 
-FREE_SPACE=$(df -h "$PARTITION" | awk 'NR==2 {print $4}' | sed 's/Gi/ GB/' | sed 's/Mi/ MB/' | sed 's/Ki/ KB/')
+FREE_SPACE=$(df -h "$PARTITION" | awk 'NR==2 {print $4}' | sed 's/G/ GB/' | sed 's/M/ MB/' | sed 's/K/ KB/')
 
 echo "Free space on $PARTITION: $FREE_SPACE"
 

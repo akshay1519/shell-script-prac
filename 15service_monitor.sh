@@ -37,10 +37,9 @@ while true; do
         echo "$svc still down after restart."
       fi
     else
-      # Optionally log when a service returns to normal
-      # log_event "OK: $svc is running."
-      :
+      echo "$svc is running."
+      log_event "OK: $svc is running."
     fi
   done
-  sleep 10  # Check every 10 seconds
+  sleep 10  # Wait before next check
 done
